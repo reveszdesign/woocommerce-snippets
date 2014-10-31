@@ -7,3 +7,8 @@
 function wc_remove_related_products( $args ) {
 return array();
 }
+add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);
+/** Remove Showing results functionality site-wide */
+function woocommerce_result_count() {
+        return;
+}
